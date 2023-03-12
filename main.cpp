@@ -6,33 +6,34 @@ using namespace std;
 class Rectangle {
 private:
     int length;
-    int breadth;
+    int width;
     string color;
 
 public:
     Rectangle(int l, int b) {
+        cout << "Constructor 1 with 2 parameters called" << endl;
         length = l;
-        breadth = b;
+        width = b;
     }
 
-    Rectangle(int l, int b, string c): length(l), breadth(b) {
+    Rectangle(int l, int b, string c) : length(l), width(b) {
+        cout << "Constructor 2  with 3 parameters called" << endl;
         color = c;
     }
     int area() {
-        return length * breadth;
+        return length * width;
     }
     int perimeter() {
-        return 2 * (length + breadth);
+        return 2 * (length + width);
     }
     void print() {
         cout << "Length: " << length << endl;
-        cout << "Breadth: " << breadth << endl;
+        cout << "Breadth: " << width
+             << endl;
         cout << "Color: " << color << endl;
         cout << "Area: " << area() << endl;
         cout << "Perimeter: " << perimeter() << endl;
     }
-
-
 };
 
 int main() {
